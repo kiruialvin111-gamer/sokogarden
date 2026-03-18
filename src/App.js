@@ -34,7 +34,7 @@ function App() {
     <Routes>
       <Route path='/' element={<GetProducts/>}/>
       <Route path='/addproducts' element={<AddProducts/>}/>
-      <Route path='/mpesapayment' element={<Mpesapayments/>}/>
+      <Route path='/mpesa' element={<Mpesapayments/>}/>
       <Route path='/signin' element={<Signin/>}/>
       <Route path='/signup' element={<Signup/>}/>
 

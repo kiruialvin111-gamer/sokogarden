@@ -2,6 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -12,6 +13,7 @@ const Getproducts = () => {
   const[loading,SetLoading]=useState("")
   const[error,SetError]=useState("")
   const[products,SetProducts]=useState([])
+  const navigate=useNavigate()
 
 
 // a variable to store our images
@@ -68,16 +70,23 @@ const Getproducts = () => {
 
 
             <br />
-            <input type="button"  value="Make Payments" className='btn btn-info w-100'/>
+            <input 
+                type="button"
+              value="Purchase now"
+              className="btn btn-info w-100"
+                 onClick={() => navigate("/mpesa", { state: { product } })}/>
           </div>
 
         </div>
 
       </div>
-))}
+      
+
         
+    ))}
     </div>
   )
 }
+
 
 export default Getproducts
